@@ -16,7 +16,9 @@ var accountSchema = new Schema({
   campaigns: [{
     type: Schema.Types.ObjectId,
     ref: 'Campaign'
-  }]
+  }],
+  processed: Boolean,
+  lastDateProcessed: Date
 }, { timestamps: true, collection: 'accounts' });
 
 
