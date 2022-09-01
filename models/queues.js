@@ -11,6 +11,10 @@ var queueSchema = new Schema({
       type: Schema.Types.ObjectId,
       ref: 'Account'
   }],
+  quarentine: [{
+    type: Schema.Types.ObjectId,
+    ref: 'Account'
+  }],
   next: Number,
   totalAccounts: Number
 }, { timestamps: true, collection: 'queues' });
