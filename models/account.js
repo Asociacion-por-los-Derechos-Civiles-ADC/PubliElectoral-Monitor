@@ -18,7 +18,8 @@ var accountSchema = new Schema({
     ref: 'Campaign'
   }],
   processed: Boolean,
-  lastDateProcessed: Date
+  lastDateProcessed: Date,
+  lastTotalPostSaved: Number
 }, { timestamps: true, collection: 'accounts' });
 
 
