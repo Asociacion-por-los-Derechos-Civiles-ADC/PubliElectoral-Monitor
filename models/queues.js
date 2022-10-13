@@ -15,8 +15,14 @@ var queueSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: 'Account'
   }],
+  manually: [{
+    type: Schema.Types.ObjectId,
+    ref: 'Account',
+    require: false
+  }],
   next: Number,
-  totalAccounts: Number
+  totalAccounts: Number,
+  lastRangeExecute: []
 }, { timestamps: true, collection: 'queues' });
 
 
