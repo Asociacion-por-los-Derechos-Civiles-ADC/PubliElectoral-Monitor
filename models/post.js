@@ -21,6 +21,10 @@ var postSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: 'PoliticalParty'
   },
+  group: {
+    num: Number,
+    total: Number
+  }
 }, { timestamps: true, collection: 'posts' });
 
 var Post = mongoose.model('Post', postSchema);
