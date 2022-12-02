@@ -25,7 +25,8 @@ var postSchema = new Schema({
     num: Number,
     total: Number
   },
-  esCopia: Boolean
+  esCopia: Boolean,
+  type:String
 }, { timestamps: true, collection: 'posts' });
 
 var Post = mongoose.model('Post', postSchema);
