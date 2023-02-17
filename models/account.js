@@ -16,7 +16,18 @@ var accountSchema = new Schema({
   campaigns: [{
     type: Schema.Types.ObjectId,
     ref: 'Campaign'
-  }]
+  }],
+  processed: Boolean,
+  lastDateProcessed: Date,
+  lastTotalPostSaved: Number,
+  manually_stats: [
+    {
+      date_range: {since: Date, until: Date},
+      total_feed: Number,
+      already_exists: Number,
+      total_new: Number
+    }
+  ]
 }, { timestamps: true, collection: 'accounts' });
 
 

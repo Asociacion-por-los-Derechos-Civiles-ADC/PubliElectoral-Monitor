@@ -17,6 +17,11 @@ var AdvertisingSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: 'Campaign'
   },
+  politicalParty: {
+    type: Schema.Types.ObjectId,
+    ref: 'PoliticalParty',
+    required: false
+  }
 }, {timestamps: true,
   collection: 'advertisings'});
 
